@@ -3,20 +3,6 @@
 
 <head>
 	
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113535243-4"></script>
-	<script>
-		var useCookies = (localStorage.getItem('useCookies') === 'true');
-		if (useCookies) {
-			window.dataLayer = window.dataLayer || [];
-			function gtag () {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-			gtag('config', 'UA-113535243-4', { 'anonymize_ip': true });
-		}
-	</script>
-
-	
 
 	<!-- Meta -->
 	<meta charset="UTF-8"/>
@@ -238,7 +224,7 @@
 <p>All files located directly in <code class="highlighter-rouge">lib</code> directory can be imported to your source
 code using <code class="highlighter-rouge">#import</code> directive, i.e.:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/invoke-global.asm"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/invoke.asm"
 </code></pre></div></div>
 
 <p>All library files located directly under <code class="highlighter-rouge">lib</code> directory has <code class="highlighter-rouge">#importonce</code>
@@ -262,17 +248,10 @@ labels) are prefixed with <code class="highlighter-rouge">c64lib_</code> prefix.
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2020 <code>c64lib</code> &#10540; last update: 2020-01-04 22:18</span></footer>
+	    <footer><span>&#169; 2018-2020 <code>c64lib</code> &#10540; last update: 2020-01-04 22:38</span></footer>
 
 
-      <div id="gdpr" style="display: none;">
-        <p>
-          This web page uses cookies to track anonymous user activities. By continuing using this site
-          or by closing this banner you indicate your consent to use these cookies.
-          You can change settings, i.e. disable user tracking on <a href="privacy.html">privacy</a> page.
-        </p>
-        <button id="gdprClose">Close</button>
-      </div>
+		
 
 	    <!-- Script -->
       <script src="/jekyll-starter/js/main.js"></script>	
