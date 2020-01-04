@@ -1,30 +1,46 @@
----
-layout: null
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atom.xml" rel="self"/>
- <id>{{ site.url }}</id>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <title>Jekyll Starter</title>
+ <link href="https://maciejmalecki.github.io/atom.xml" rel="self"/>
+ <id>https://maciejmalecki.github.io</id>
+ <updated>2020-01-04T22:18:11+00:00</updated>
  <author>
-   <name>{{ site.author.name }}</name>
-   <uri>{{ site.author.url }}</uri>
-   <email>{{ site.author.email }}</email>
+   <name></name>
+   <uri></uri>
+   <email></email>
  </author>
 
- {% for post in site.posts limit: 10 %}
+ 
 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.url }}{{ post.url }}"/>
-   <id>{{ site.url }}{{ post.id }}</id>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <content type="html">{{ post.content | xml_escape | truncatewords:50 }}</content>
+   <title>Gradle Retro Assembler plugin 1.0.0 is out</title>
+   <link href="https://maciejmalecki.github.io/gradle-retro-assembler-plugin-1-0-is-out"/>
+   <id>https://maciejmalecki.github.io/gradle-retro-assembler-plugin-1-0-is-out</id>
+   <updated>2019-11-07T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;I would like to announce that Retro Assembler plugin for Gradle build tool is officially released. Version 1.0.0 provides following features:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Support for KickAssembler v4.19+&lt;/li&gt; &lt;li&gt;Can assemble any number of &lt;code class=&quot;highlighter-rouge&quot;&gt;asm&lt;/code&gt; files with KickAss with single launch of Gradle tool&lt;/li&gt; &lt;li&gt;Automatically downloads proper version of KickAss and uses...</content>
  </entry>
 
- {% endfor %}
+ 
+
+ <entry>
+   <title>Put subroutine into the library</title>
+   <link href="https://maciejmalecki.github.io/macro-hosted-subroutines"/>
+   <id>https://maciejmalecki.github.io/macro-hosted-subroutines</id>
+   <updated>2018-08-02T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Writing and using libraries in KickAssembler</title>
+   <link href="https://maciejmalecki.github.io/assembler-libraries"/>
+   <id>https://maciejmalecki.github.io/assembler-libraries</id>
+   <updated>2018-04-26T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</content>
+ </entry>
+
+ 
 
 </feed>

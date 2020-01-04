@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>News</title>
-  <meta name="description" content="Example Jekyll project with deployment to github pages, GPRD support and other">
+	<title>Contribute</title>
+  <meta name="description" content="How to contribute.">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/jekyll-starter/css/main.css">
@@ -219,35 +219,40 @@
 			<article id="page">
   
 
-  <h1>News</h1>
-  <ul id="posts">
+  <h1>Contribute</h1>
+  <p>In this document we specify rules that must be obeyed when working with <code class="highlighter-rouge">c64lib</code> repositories. These rules are intended to make our lives easier, not vice versa. These rules are valid for all repositories unless explicitly overridden.</p>
 
-  
+<h2 id="master-branch">Master branch</h2>
+<p>Master branch is the most important branch for each library. Based on this branch new releases are created. Therefore master branch is always protected - it cannot be deleted or pushed with force option.</p>
 
-  <li class="post">
-    <h2><a href="/jekyll-starter/gradle-retro-assembler-plugin-1-0-is-out">Gradle Retro Assembler plugin 1.0.0 is out</a></h2>
-    <time datetime="2019-11-07T00:00:00+00:00" class="by-line"> <i>07 Nov 2019</i> </time>
-    <p>I would like to announce that Retro Assembler plugin for Gradle build tool is officially released. Version 1.0.0 provides following features: Support for KickAssembler v4.19+ Can assemble any number of asm files with KickAss with single launch of Gradle tool Automatically downloads proper version of KickAss and uses it Automatically...</p>
-  </li>
+<p>The general rule is that we do not work directly on master branch - for each feature or bug a dedicated feature branch must be created. When work is done and tested, a pull request to master should be created and reviewed. Once it is done, feature branch should be rebased on master, squashed if needed and merged with fast forward option so that we get linear history on master branch.</p>
 
-  
+<h2 id="develop-branch">Develop branch</h2>
+<p>Develop branch is an optional branch that could be used for developing new version of library. When this option is chosen (it should be chosen for complex releases, for simple tasks we probably don’t need it at all), all feature branches that are indented to be in this forthcoming release should be started from develop branch and should be merged (with rebase and fast forward, as mentioned earlier) to develop branch. When release is ready, develop branch should be rebased and merged with fast forward option to the master branch.</p>
 
-  <li class="post">
-    <h2><a href="/jekyll-starter/macro-hosted-subroutines">Put subroutine into the library</a></h2>
-    <time datetime="2018-08-02T00:00:00+00:00" class="by-line"> <i>02 Aug 2018</i> </time>
-    <p>Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</p>
-  </li>
+<h2 id="feature-branch">Feature branch</h2>
+<p>For each feature or bugfix being developed a feature branch should be created. It should start from either master or develop branch (if develop branch exists) and each piece of development should be committed and pushed there.</p>
 
-  
+<p>For each feature or branch there should be an issue existing in one of the projects associated with given repository. Each issue has ID that is displayed as #<number> (i.e.: #10). Each feature branch name should follow that ID in following form: `<ID>-<number>` (i.e.: `CPR-10`).</number></ID></number></p>
 
-  <li class="post">
-    <h2><a href="/jekyll-starter/assembler-libraries">Writing and using libraries in KickAssembler</a></h2>
-    <time datetime="2018-04-26T00:00:00+00:00" class="by-line"> <i>26 Apr 2018</i> </time>
-    <p>It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</p>
-  </li>
-
-  
+<p>Each repository has following ID assigned:</p>
+<ul>
+  <li><code class="highlighter-rouge">CMN</code> - c64lib/common</li>
+  <li><code class="highlighter-rouge">CHIP</code> - c64lib/chipset</li>
+  <li><code class="highlighter-rouge">TEXT</code> - c64lib/text</li>
+  <li><code class="highlighter-rouge">CPR</code> - c64lib/copper64</li>
 </ul>
+
+<h2 id="deleting-branches">Deleting branches</h2>
+<p>Feature branches should be deleted after merging. One can easily do it using GitHub GUI or alternatively using command line:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin -d &lt;branch name&gt;
+</code></pre></div></div>
+
+<p>Develop branch can also be deleted or reset to latest master commit and pushed with force option.</p>
+
+<h2 id="library-versioning">Library versioning</h2>
+<p>TBD</p>
 
 
 </article>

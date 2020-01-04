@@ -1,0 +1,1 @@
+Sitemap: https://maciejmalecki.github.io/jekyll-starter/sitemap.xml

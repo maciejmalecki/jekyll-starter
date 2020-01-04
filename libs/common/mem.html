@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>News</title>
-  <meta name="description" content="Example Jekyll project with deployment to github pages, GPRD support and other">
+	<title>mem</title>
+  <meta name="description" content="Various memory related operations">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/jekyll-starter/css/main.css">
@@ -218,36 +218,52 @@
 
 			<article id="page">
   
-
-  <h1>News</h1>
-  <ul id="posts">
-
+  
+    
+    
+    <a href="/jekyll-starter/libs/common">&laquo; Back</a>
   
 
-  <li class="post">
-    <h2><a href="/jekyll-starter/gradle-retro-assembler-plugin-1-0-is-out">Gradle Retro Assembler plugin 1.0.0 is out</a></h2>
-    <time datetime="2019-11-07T00:00:00+00:00" class="by-line"> <i>07 Nov 2019</i> </time>
-    <p>I would like to announce that Retro Assembler plugin for Gradle build tool is officially released. Version 1.0.0 provides following features: Support for KickAssembler v4.19+ Can assemble any number of asm files with KickAss with single launch of Gradle tool Automatically downloads proper version of KickAss and uses it Automatically...</p>
-  </li>
 
-  
+  <h1>mem</h1>
+  <p>This module contains various memory related macros and subroutines that cover
+following scenarios: copying memory blocks, rotating memory blocks, filling
+memory blocks with given value.<!--more--></p>
 
-  <li class="post">
-    <h2><a href="/jekyll-starter/macro-hosted-subroutines">Put subroutine into the library</a></h2>
-    <time datetime="2018-08-02T00:00:00+00:00" class="by-line"> <i>02 Aug 2018</i> </time>
-    <p>Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</p>
-  </li>
-
-  
-
-  <li class="post">
-    <h2><a href="/jekyll-starter/assembler-libraries">Writing and using libraries in KickAssembler</a></h2>
-    <time datetime="2018-04-26T00:00:00+00:00" class="by-line"> <i>26 Apr 2018</i> </time>
-    <p>It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</p>
-  </li>
-
-  
+<h2 id="usage">Usage</h2>
+<p>The mem module consists of following files:</p>
+<ul>
+  <li><code class="highlighter-rouge">lib/mem-global.asm</code></li>
+  <li><code class="highlighter-rouge">lib/mem.asm</code></li>
 </ul>
+
+<p>Additionally, the mem module consists of following subroutines:</p>
+<ul>
+  <li><code class="highlighter-rouge">lib/sub/copy-large-mem-forward.asm</code></li>
+  <li><code class="highlighter-rouge">lib/sub/fill-mem.asm</code></li>
+  <li><code class="highlighter-rouge">lib/sub/fill-screen.asm</code></li>
+  <li><code class="highlighter-rouge">lib/sub/rotate-mem-right.asm</code></li>
+</ul>
+
+<p>All files located directly in <code class="highlighter-rouge">lib</code> directory can be imported to your source
+code using <code class="highlighter-rouge">#import</code> directive, i.e.:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/mem-global.asm"
+</code></pre></div></div>
+
+<p>All library files located directly under <code class="highlighter-rouge">lib</code> directory has <code class="highlighter-rouge">#importonce</code>
+declared which means they can be safely imported multiple times - only first
+import is effective.</p>
+
+<p>Library files with <code class="highlighter-rouge">-global.asm</code> suffix contains globalized elements that can
+be directly accessed from root namespace. All names of these elements (except
+labels) are prefixed with <code class="highlighter-rouge">c64lib_</code> prefix.</p>
+
+<p>All library files located under <code class="highlighter-rouge">lib\sub</code> directory are subroutines and should
+be imported only once (it’s up to the programmer to ensure this) - they are
+not macros so corresponding assembly code will be embedded right in the place
+where they are imported.</p>
+
 
 
 </article>

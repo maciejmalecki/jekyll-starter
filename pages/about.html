@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>News</title>
-  <meta name="description" content="Example Jekyll project with deployment to github pages, GPRD support and other">
+	<title>About</title>
+  <meta name="description" content="This page describes content of this blog.">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/jekyll-starter/css/main.css">
@@ -219,35 +219,56 @@
 			<article id="page">
   
 
-  <h1>News</h1>
-  <ul id="posts">
+  <h1>About</h1>
+  <h2 id="ci-status">CI status</h2>
+<p>Please note, that C64lib is migrating to CircleCI as CI environment. For time
+being status from both CI (Travis-CI and CircleCI) are presented below.</p>
 
-  
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Module</th>
+      <th style="text-align: left">Master</th>
+      <th style="text-align: left">Develop</th>
+      <th style="text-align: left">Master</th>
+      <th style="text-align: left">Develop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">common</td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/common"><img src="https://travis-ci.org/c64lib/common.svg?branch=master" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/common"><img src="https://travis-ci.org/c64lib/common.svg?branch=develop" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://circleci.com/gh/c64lib/common/tree/master"><img src="https://circleci.com/gh/c64lib/common/tree/master.svg?style=svg" alt="CircleCI" /></a></td>
+      <td style="text-align: left"><a href="https://circleci.com/gh/c64lib/common/tree/develop"><img src="https://circleci.com/gh/c64lib/common/tree/develop.svg?style=svg" alt="CircleCI" /></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">chipset</td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/chipset"><img src="https://travis-ci.org/c64lib/chipset.svg?branch=master" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/chipset"><img src="https://travis-ci.org/c64lib/chipset.svg?branch=develop" alt="Build Status" /></a></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/text"><img src="https://travis-ci.org/c64lib/text.svg?branch=master" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/text"><img src="https://travis-ci.org/c64lib/text.svg?branch=develop" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://circleci.com/gh/c64lib/text/tree/master"><img src="https://circleci.com/gh/c64lib/text/tree/master.svg?style=svg" alt="CircleCI" /></a></td>
+      <td style="text-align: left"><a href="https://circleci.com/gh/c64lib/text/tree/develop"><img src="https://circleci.com/gh/c64lib/text/tree/develop.svg?style=svg" alt="CircleCI" /></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">copper64</td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/copper64"><img src="https://travis-ci.org/c64lib/copper64.svg?branch=master" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/copper64"><img src="https://travis-ci.org/c64lib/copper64.svg?branch=develop" alt="Build Status" /></a></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
 
-  <li class="post">
-    <h2><a href="/jekyll-starter/gradle-retro-assembler-plugin-1-0-is-out">Gradle Retro Assembler plugin 1.0.0 is out</a></h2>
-    <time datetime="2019-11-07T00:00:00+00:00" class="by-line"> <i>07 Nov 2019</i> </time>
-    <p>I would like to announce that Retro Assembler plugin for Gradle build tool is officially released. Version 1.0.0 provides following features: Support for KickAssembler v4.19+ Can assemble any number of asm files with KickAss with single launch of Gradle tool Automatically downloads proper version of KickAss and uses it Automatically...</p>
-  </li>
+<hr />
 
-  
-
-  <li class="post">
-    <h2><a href="/jekyll-starter/macro-hosted-subroutines">Put subroutine into the library</a></h2>
-    <time datetime="2018-08-02T00:00:00+00:00" class="by-line"> <i>02 Aug 2018</i> </time>
-    <p>Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</p>
-  </li>
-
-  
-
-  <li class="post">
-    <h2><a href="/jekyll-starter/assembler-libraries">Writing and using libraries in KickAssembler</a></h2>
-    <time datetime="2018-04-26T00:00:00+00:00" class="by-line"> <i>26 Apr 2018</i> </time>
-    <p>It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</p>
-  </li>
-
-  
-</ul>
+<p><img src="/jekyll-starter/img/c64lib-avatar.jpg" alt="c64lib" /></p>
 
 
 </article>

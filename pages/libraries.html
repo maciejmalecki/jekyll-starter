@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>News</title>
-  <meta name="description" content="Example Jekyll project with deployment to github pages, GPRD support and other">
+	<title>Libraries</title>
+  <meta name="description" content="What libraries are included in the `c64lib`.">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/jekyll-starter/css/main.css">
@@ -219,35 +219,32 @@
 			<article id="page">
   
 
-  <h1>News</h1>
-  <ul id="posts">
+  <h1>Libraries</h1>
+  <p>The <code class="highlighter-rouge">c64lib</code> project consists of multiple libraries. Each library is hosted as separate GitHub repository 
+and have corresponding Travis-CI entry defined (see: <a href="https://travis-ci.org/c64lib">https://travis-ci.org/c64lib</a>).</p>
 
-  
-
-  <li class="post">
-    <h2><a href="/jekyll-starter/gradle-retro-assembler-plugin-1-0-is-out">Gradle Retro Assembler plugin 1.0.0 is out</a></h2>
-    <time datetime="2019-11-07T00:00:00+00:00" class="by-line"> <i>07 Nov 2019</i> </time>
-    <p>I would like to announce that Retro Assembler plugin for Gradle build tool is officially released. Version 1.0.0 provides following features: Support for KickAssembler v4.19+ Can assemble any number of asm files with KickAss with single launch of Gradle tool Automatically downloads proper version of KickAss and uses it Automatically...</p>
-  </li>
-
-  
-
-  <li class="post">
-    <h2><a href="/jekyll-starter/macro-hosted-subroutines">Put subroutine into the library</a></h2>
-    <time datetime="2018-08-02T00:00:00+00:00" class="by-line"> <i>02 Aug 2018</i> </time>
-    <p>Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</p>
-  </li>
-
-  
-
-  <li class="post">
-    <h2><a href="/jekyll-starter/assembler-libraries">Writing and using libraries in KickAssembler</a></h2>
-    <time datetime="2018-04-26T00:00:00+00:00" class="by-line"> <i>26 Apr 2018</i> </time>
-    <p>It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</p>
-  </li>
-
-  
+<p>There are following core libraries:</p>
+<ul>
+  <li><a href="https://github.com/c64lib/common">common</a> - the one that hosts some commonly used functions, macros and subroutines; no other <code class="highlighter-rouge">c64lib</code> library can work without it. This code is intended to be platform (C64) independent, it complies to typical MOS 6502 assembler syntax (except it is written in KickAss, which is C64 specific at the moment).</li>
+  <li><a href="https://github.com/c64lib/chipset">chipset</a> - the one that hosts code that is platform specific and is dedicated to handle typical C64 chipset such as VIC-II, SID, CIA as well as typical C64 memory layout.</li>
 </ul>
+
+<p>There are following auxiliary libraries:</p>
+<ul>
+  <li><a href="https://github.com/c64lib/text">text</a> - the one that handles displaying text in text mode of Commodore 64 / VIC-II.</li>
+</ul>
+
+<p>There are following application libraries:</p>
+<ul>
+  <li><a href="https://github.com/c64lib/copper64">copper64</a> - utility library that makes raster interrupt programming on VIC-II pleasant and easy.</li>
+</ul>
+
+<h2 id="library-dependencies">Library dependencies</h2>
+<p>The following diagram describes dependencies between internal libraries of <code class="highlighter-rouge">c64lib</code> project. 
+There is also an excellent <code class="highlighter-rouge">64spec</code> testing library used and shown as external reference.</p>
+
+<p><img src="../img/Library%20dependencies.png" alt="Image dependencies" /></p>
+
 
 
 </article>

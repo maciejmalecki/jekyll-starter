@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>News</title>
-  <meta name="description" content="Example Jekyll project with deployment to github pages, GPRD support and other">
+	<title>Common library</title>
+  <meta name="description" content="Common library">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/jekyll-starter/css/main.css">
@@ -218,37 +218,158 @@
 
 			<article id="page">
   
-
-  <h1>News</h1>
-  <ul id="posts">
-
+  
+    
+    
+    <a href="/jekyll-starter/libs">&laquo; Back</a>
   
 
-  <li class="post">
-    <h2><a href="/jekyll-starter/gradle-retro-assembler-plugin-1-0-is-out">Gradle Retro Assembler plugin 1.0.0 is out</a></h2>
-    <time datetime="2019-11-07T00:00:00+00:00" class="by-line"> <i>07 Nov 2019</i> </time>
-    <p>I would like to announce that Retro Assembler plugin for Gradle build tool is officially released. Version 1.0.0 provides following features: Support for KickAssembler v4.19+ Can assemble any number of asm files with KickAss with single launch of Gradle tool Automatically downloads proper version of KickAss and uses it Automatically...</p>
-  </li>
 
+  <h1>Common library</h1>
+  <p>This is a core utility library for <code class="highlighter-rouge">c64lib</code>. It is written in KickAssembler
+but in general contains code that is portable to other architectures based on
+MOS 6502 (VIC 20, C128, 8-bit Atari etc).<!--more--></p>
+
+<h2 id="installation">Installation</h2>
+<p>Follow generic instruction for <code class="highlighter-rouge">c64lib</code> 
+<a href="/jekyll-starter/pages/install">installation</a> 
+in order to bring “Common library” into your Kick Assembler project. Simply
+clone the repository into directory of choice:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/c64lib/common.git
+</code></pre></div></div>
+
+<p>Remember to add a directory that contains cloned common repository
+to your <code class="highlighter-rouge">libdir</code> when executing Kick Assembler.</p>
+
+
+
+  <h2>Content</h2>
   
-
-  <li class="post">
-    <h2><a href="/jekyll-starter/macro-hosted-subroutines">Put subroutine into the library</a></h2>
-    <time datetime="2018-08-02T00:00:00+00:00" class="by-line"> <i>02 Aug 2018</i> </time>
-    <p>Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</p>
-  </li>
-
   
-
-  <li class="post">
-    <h2><a href="/jekyll-starter/assembler-libraries">Writing and using libraries in KickAssembler</a></h2>
-    <time datetime="2018-04-26T00:00:00+00:00" class="by-line"> <i>26 Apr 2018</i> </time>
-    <p>It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</p>
-  </li>
-
+    
+    
+    
   
-</ul>
-
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+      <a href="/jekyll-starter/libs/common/invoke" class="page-reference">
+        <h3>invoke</h3>
+        <p class="description">ipsum lorem</p>
+        <p class="files">Source files: <code>lib/invoke.asm, lib/invoke-global.asm</code></p>
+        <p class="content">
+</p>
+      </a>
+    
+  
+    
+    
+    
+      <a href="/jekyll-starter/libs/common/math" class="page-reference">
+        <h3>math</h3>
+        <p class="description">Basic arithmetic operations.</p>
+        <p class="files">Source files: <code>lib/math.asm, lib/math-global.asm</code></p>
+        <p class="content"><p>Convenience macros for 16 bit arithmetic operations such as adding, subtraction,
+increment, decrement.</p>
+</p>
+      </a>
+    
+  
+    
+    
+    
+      <a href="/jekyll-starter/libs/common/mem" class="page-reference">
+        <h3>mem</h3>
+        <p class="description">Various memory related operations</p>
+        <p class="files">Source files: <code>lib/mem.asm, lib/mem-global.asm</code></p>
+        <p class="content"><p>This module contains various memory related macros and subroutines that cover
+following scenarios: copying memory blocks, rotating memory blocks, filling
+memory blocks with given value.</p>
+</p>
+      </a>
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
 
 </article>
 
