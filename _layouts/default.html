@@ -64,6 +64,7 @@
 	    <!-- Footer -->
 	    {% include footer.html %}
 
+		{% if site.tracking.showGDPR %}
       <div id="gdpr" style="display: none;">
         <p>
           This web page uses cookies to track anonymous user activities. By continuing using this site
@@ -72,6 +73,7 @@
         </p>
         <button id="gdprClose">Close</button>
       </div>
+		{% endif %}
 
 	    <!-- Script -->
       {% include script.html %}

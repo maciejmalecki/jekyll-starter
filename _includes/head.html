@@ -1,6 +1,6 @@
 <head>
-	{% if jekyll.environment == 'production' %}
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113535243-4"></script>
+	{% if jekyll.environment == 'production' and site.tracking.ga.use %}
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.tracking.ga.key }}"></script>
 	<script>
 		var useCookies = (localStorage.getItem('useCookies') === 'true');
 		if (useCookies) {
@@ -9,7 +9,7 @@
 				dataLayer.push(arguments);
 			}
 			gtag('js', new Date());
-			gtag('config', 'UA-113535243-4', { 'anonymize_ip': true });
+			gtag('config', '{{ site.tracking.ga.key }}', { 'anonymize_ip': true });
 		}
 	</script>
 

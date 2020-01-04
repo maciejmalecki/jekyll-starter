@@ -32,6 +32,13 @@ plugins:
 # Custom variables
 version: "1.0.0"
 
+# Google Analytics & GPRD
+tracking:
+    showGDPR: false
+    ga:
+        use: false
+        key: <set me>
+
 # Options
 custom_header: false
 custom_nav_footer: false
