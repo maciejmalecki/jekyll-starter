@@ -1,0 +1,78 @@
+/*- Custom style -*/
+
+// -- Put custom style under this point -- //
+
+// custom colors
+$header-background-color: lightgrey;
+
+// custom spacing
+$list-spacing: 0.2em;
+
+img + em {
+
+}
+
+// tables
+table {
+  border-spacing: 0px;
+  th {
+    background-color: $header-background-color;
+  }
+  th, td {
+    padding: 5px;
+    margin: 0px;
+  }
+  img {
+    margin-bottom: 0px;
+  }
+}
+
+div.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  div.tile {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 1em;
+    margin: 1em;
+    width: 10em;
+    border-color: $text-color;
+    border-style: dotted;
+    border-width: 1px;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+a.page-reference {
+  color: $text-color;
+  text-decoration: none;
+  font-weight: normal;
+  &:hover,
+  &:focus {
+    color: darken($text-color, 5%);
+  }
+}
+
+.page-reference {
+  h3 {
+    padding-top: $list-spacing;
+    padding-bottom: $list-spacing;
+  }
+  p.description {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: $list-spacing;
+  }
+  p.files {
+    border-color: $text-color;
+    border-width: 1px;
+    border-style: dotted;
+    padding: $list-spacing;
+  }
+  p.content {
+
+  }
+}

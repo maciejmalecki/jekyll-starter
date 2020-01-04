@@ -1,0 +1,42 @@
+# Site settings
+title: Jekyll Starter
+description: "Example Jekyll project with deployment to github pages, GPRD support and other"
+author: Maciej Małecki
+name: "maciejmalecki"
+email: "malecki.maciej@gmail.com"
+url: "https://maciejmalecki.github.io"
+
+# Build settings
+baseurl: /jekyll-starter # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /news/page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Custom variables
+version: "1.0.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
+
+repository: "maciejmalecki/jekyll-starter"
+username: maciejmalecki
+repo: jekyll-starter
