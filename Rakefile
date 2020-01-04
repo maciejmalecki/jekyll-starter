@@ -10,7 +10,7 @@ require 'date'
 require 'yaml'
 
 CONFIG = YAML.load(File.read('_config.yml'))
-USERNAME = "c64lib"
+USERNAME = "maciejmalecki"
 REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
 
 
